@@ -1382,7 +1382,7 @@ Changed
 In app/index.html change to load jquery and angular from local resources
 
 Original
-
+```
  3   <head>
  4     <meta charset="utf-8">
  5     <title></title>
@@ -1397,10 +1397,10 @@ Original
 14     <link rel="stylesheet" href="styles/main.css">
 15     <!-- endbuild -->
 16   </head>
-
+```
 
 Changed
-
+```
  3   <head>
  4     <meta charset="utf-8">
  5     <title></title>
@@ -1418,6 +1418,7 @@ Changed
        <script src="bower_components/angular/angular.js"></script>
        <!-- endbuild -->
 16   </head>
+```
 
 ../node_modules/cordova/bin/cordova build
 
