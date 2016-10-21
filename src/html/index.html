@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Zonnepanalen</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/zonpan.css">
+	<script src="../js/angular.js"></script>
+	<script src="../js/zonpan-service.js"></script>
+	<script src="../js/zonpan-controller.js"></script>
+</head>
+
+<body>
+	<div class="container" ng-app="myApp">
+		<h1>Zonnepanelen</h1>
+		<div ng-controller="MyController">
+			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_sites()">Algemeen</button>
+			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_overview()">Overzicht</button>
+			<hr/>
+
+
+			<div id="algemeen" ng-show="algemeen">
+				<ul class="list-group-item">number sites <span class="right">{{events.count}}</span></ul>
+
+				<ul class="list-group" ng-repeat="event in events.site">
+					<ul class="list-group-item">id <span class="right">{{event.id}}</span></ul>
+					<ul class="list-group-item">name <span class="right">{{event.name}}</span></ul>
+					<ul class="list-group-item">accountId <span class="right">{{event.accountId}}</span></ul>
+					<ul class="list-group-item">status <span class="right">{{event.status}} </span></ul>
+					<ul class="list-group-item">peakPower <span class="right">{{event.peakPower}}</span> </ul>
+					<ul class="list-group-item">lastUpdateTime <span class="right">{{event.lastUpdateTime}}</span> </ul>
+					<ul class="list-group-item">currency <span class="right">{{event.currency}}</span> </ul>
+					<ul class="list-group-item">installationDate <span class="right">{{event.installationDate}} </span></ul>
+					<ul class="list-group-item">notes <span class="right">{{event.notes}} </span></ul>
+					<ul class="list-group-item">type <span class="right">{{event.type}} </span></ul>
+					<ul class="list-group-item">location </ul>
+					<ul class="list-group-item">country <span class="right">{{event.location.country}} </span></ul>
+					<ul class="list-group-item">city <span class="right">{{event.location.city}} </span></ul>
+					<ul class="list-group-item">address <span class="right">{{event.location.address}} </span></ul>
+					<ul class="list-group-item">address2 <span class="right">{{event.location.address2}} </span> </ul>
+					<ul class="list-group-item">zip <span class="right">{{event.location.zip}} </span></ul>
+					<ul class="list-group-item">timeZone <span class="right">{{event.location.timeZone}} </span></ul>
+					<ul class="list-group-item">countryCode <span class="right">{{event.location.countryCode}}</span> </ul>
+					<ul class="list-group-item">primaryModule</ul>
+					<ul class="list-group-item">manufacturerName <span class="right">{{event.primaryModule.manufacturerName}} </span> </ul>
+					<ul class="list-group-item">modelName <span class="right">{{event.primaryModule.moduleName}} </span></ul>
+					<ul class="list-group-item">maximumPower <span class="right">{{event.primaryModule.maximumPower}} </span></ul>
+					<ul class="list-group-item">uris</ul>
+					<ul class="list-group-item">DATA_PERIOD <span class="right">{{event.uris.DATA_PERIOD}} </span> </ul>
+					<ul class="list-group-item">OVERVIEW <span class="right">{{event.uris.OVERVIEW}} </span></ul>
+					<ul class="list-group-item">DETAILS <span class="right">{{event.uris.DETAILS}} </span></ul>
+					<ul class="list-group-item">publicSettings <span class="right">{{event.publicSettings.isPublic}} </span> </ul>
+				</ul>
+			</div>
+
+			<div id="overzicht" ng-show="overzicht">
+				<ul class="list-group-item">lastUpdateTime <span class="right">{{events.lastUpdateTime}}</span></ul>
+				<ul class="list-group-item">lifeTimeData</ul>
+				<ul class="list-group-item">energy <span class="right">{{events.lifeTimeData.energy}}</span></ul>
+				<ul class="list-group-item">revenue <span class="right">{{events.lifeTimeData.revenue}}</span></ul>
+				<ul class="list-group-item">lastYearData</ul>
+				<ul class="list-group-item">energy <span class="right">{{events.lastYearData.energy}}</span></ul>
+				<ul class="list-group-item">lastMonthData</ul>
+				<ul class="list-group-item">energy <span class="right">{{events.lastMonthData.energy}}</span></ul>
+				<ul class="list-group-item">lastDayData</ul>
+				<ul class="list-group-item">energy <span class="right">{{events.lastDayData.energy}}</span></ul>
+				<ul class="list-group-item">currentPower</ul>
+				<ul class="list-group-item">power <span class="right">{{events.currentPower.power}}</span></ul>
+				<ul class="list-group-item">measured by <span class="right">{{events.measuredBy}}</span></ul>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

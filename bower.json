@@ -1,0 +1,28 @@
+{
+  "name": "zonpan",
+  "description": "Test Solar Edge API",
+  "main": "index.html",
+  "authors": [
+    "bart.vanpelt@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Solar",
+    "Edge",
+    "API",
+    "test"
+  ],
+  "homepage": "https://github.com/bvpelt/zonpan",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
