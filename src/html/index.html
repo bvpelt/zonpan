@@ -16,7 +16,25 @@
 		<h1>Zonnepanelen</h1>
 		<div ng-controller="MyController">
 			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_sites()">Algemeen</button>
-			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_overview()">Overzicht</button>
+
+			<div class="form-group">
+				<label for="startdate">Start:</label>
+				<input type="text" class="form-control" id="startdate">
+			</div>
+			<div class="form-group">
+				<label for="enddate">End:</label>
+				<input type="text" class="form-control" id="enddate">
+			</div>
+			<div class="form-group">
+				<label for="timeUnit">Interval:</label>
+				<select class="form-control" id="timeUnit">
+    				<option>DAG - Maximaal 1 jaar</option>    
+    				<option>Uur - Maximaal 1 maand</option>
+					<option>Kwartier - Maximaal 1 maand</option>    
+  				</select>
+			</div>
+			
+			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_data()">Data</button>
 			<hr/>
 
 
@@ -24,6 +42,7 @@
 				<ul class="list-group-item">number sites <span class="right">{{events.count}}</span></ul>
 
 				<ul class="list-group" ng-repeat="event in events.site">
+					<button class="btn btn-lg btn-primary" type="button" ng-click="clk_overview($index)">Overzicht</button>
 					<ul class="list-group-item">id <span class="right">{{event.id}}</span></ul>
 					<ul class="list-group-item">name <span class="right">{{event.name}}</span></ul>
 					<ul class="list-group-item">accountId <span class="right">{{event.accountId}}</span></ul>
@@ -55,6 +74,7 @@
 			</div>
 
 			<div id="overzicht" ng-show="overzicht">
+				<button class="btn btn-lg btn-primary" type="button" ng-click="clk_sites()">Algemeen</button>
 				<ul class="list-group-item">lastUpdateTime <span class="right">{{events.lastUpdateTime}}</span></ul>
 				<ul class="list-group-item">lifeTimeData</ul>
 				<ul class="list-group-item">energy <span class="right">{{events.lifeTimeData.energy}}</span></ul>
