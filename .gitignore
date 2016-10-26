@@ -44,3 +44,9 @@ bower_components/
 src/css/bootstrap.css
 .vscode/
 >>>>>>> handwerk
+src/js/angular.js
+src/js/angular-animate.js
+src/js/angular-sanitize.js
+src/js/jquery.min.js
+src/js/ui-bootstrap-tpls.js
+src/css/bootstrap-datetimepicker.min.css

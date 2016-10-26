@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/zonpan.css">
 	<script src="../js/angular.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/angular-animate.js"></script>
+	<script src="../js/angular-sanitize.js"></script>
+	<script src="../js/ui-bootstrap-tpls.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/zonpan-service.js"></script>
 	<script src="../js/zonpan-controller.js"></script>
 </head>
@@ -33,10 +38,24 @@
 					<option>Kwartier - Maximaal 1 maand</option>    
   				</select>
 			</div>
-			
+
 			<button class="btn btn-lg btn-primary" type="button" ng-click="clk_data()">Data</button>
 			<hr/>
 
+			<div ng-controller="DatepickerDemoCtrl">
+				<pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+				<h4>Inline</h4>
+				<div style="display:inline-block; min-height:290px;">
+					<div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+				</div>
+
+				<hr />
+				<button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+				<button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+				<button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+				<button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+			</div>
 
 			<div id="algemeen" ng-show="algemeen">
 				<ul class="list-group-item">number sites <span class="right">{{events.count}}</span></ul>

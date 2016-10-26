@@ -24,6 +24,8 @@
   "dependencies": {
     "angular": "angularjs#^1.5.8",
     "bootstrap": "^3.3.7",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.43"
+    "angular-sanitize": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-bootstrap": "^2.2.0"
   }
 }
