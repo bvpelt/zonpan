@@ -53,8 +53,7 @@ angular.module('myApp', ['myApp.services', 'ngAnimate', 'ngSanitize', 'ui.bootst
                 	});
 
         	}
-    	}
-    ).controller('DatepickerPopupDemoCtrl', function ($scope) {
+
         $scope.today = function() {
           $scope.dt = new Date();
         };
@@ -102,6 +101,7 @@ angular.module('myApp', ['myApp.services', 'ngAnimate', 'ngSanitize', 'ui.bootst
 
         $scope.setDate = function(year, month, day) {
           $scope.dt = new Date(year, month, day);
+          $scope.startDate = $scope.dt;
         };
 
         $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
