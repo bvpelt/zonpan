@@ -6,6 +6,7 @@ From ng-book.pdf page 475
 - See [date time picker](https://eonasdan.github.io/bootstrap-datetimepicker/Installing/)
 - See [angular date time](https://angular-ui.github.io/bootstrap/#/top)
 - See [angular ui](https://angular-ui.github.io/bootstrap/)
+- See [angular ui examples](https://angular-ui.github.io/bootstrap/)
 
 ```bash
 $ npm init
